@@ -1,0 +1,23 @@
+@use "../configs/colors";
+
+.ping-single-column {
+    height: 100%;
+    padding: 4rem 3.3rem;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: max-content 1fr max-content;
+    row-gap: 1.8rem;
+
+    &__header {
+        margin-top: 3.3rem;
+        padding: 3rem 0;
+    }
+
+    &__footer {
+        p {
+            font-size: 1em;
+            color: colors.$neutral-gray;
+        }
+    }
+}

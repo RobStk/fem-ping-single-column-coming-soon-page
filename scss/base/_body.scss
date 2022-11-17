@@ -1,0 +1,9 @@
+@use "../configs/fonts";
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: fonts.$family-primary;
+    font-size: fonts.$size-primary;
+}

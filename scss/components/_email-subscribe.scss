@@ -1,0 +1,42 @@
+@use "../configs/colors";
+@use "../configs/fonts";
+
+.email-subscribe {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    min-height: 13em;
+
+    input {
+        padding: 1.1em 2.5em;
+        border: none;
+        border-radius: 50vmax;
+        font: inherit;
+        font-size: 1.2em;
+
+        &[type=email] {
+            border-style: solid;
+            border-width: 2px;
+            border-color: colors.$secondary-pale-blue;
+
+            &::placeholder {
+                color: colors.$secondary-pale-blue;
+            }
+        }
+
+        &[type=submit] {
+            background-color: colors.$primary-blue;
+            color: white;
+            font-weight: fonts.$weight-semiBold;
+            cursor: pointer;
+            -webkit-box-shadow: 0px 16px 20px -1px colors.$primary-blue-shadow;
+            -moz-box-shadow: 0px 16px 20px -1px colors.$primary-blue-shadow;
+            box-shadow: 0px 16px 20px -1px colors.$primary-blue-shadow;
+            transition: all 0.3s;
+
+            &:hover {
+                background-color: colors.$primary-blue-hover;
+            }
+        }
+    }
+}
