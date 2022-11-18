@@ -1,0 +1,33 @@
+@mixin mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    min-height: 13em;
+    font-size: 1.2em;
+
+    input {
+        padding: 1.1em 2.5em;
+    }
+}
+
+@mixin desktop {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    min-height: 6.5em;
+    font-size: 0.85em;
+
+    input {
+        padding: 1em 1.75em;
+
+        &[type=email] {
+            flex-grow: 3;
+        }
+
+        &[type=submit] {
+            flex-grow: 1;
+        }
+    }
+
+
+}

@@ -1,3 +1,6 @@
+@use "../utils/screen";
+@use "../utils/email-forms";
+
 .article-content {
     display: flex;
     flex-direction: column;
@@ -18,5 +21,35 @@
         flex-direction: row;
         justify-content: center;
         column-gap: 1.3em;
+    }
+
+    form {
+        @include email-forms.mobile();
+    }
+
+    @include screen.respond-to("desktop") {
+
+        &__social {
+            margin-top: 1em;
+            column-gap: 0.8em;
+        }
+
+        row-gap: 2rem;
+
+        form {
+            @include email-forms.desktop();
+        }
+
+        .text-section {
+            gap: 1rem;
+
+            p {
+                font-size: unset;
+            }
+        }
+
+        .social-icon-container {
+            font-size: 0.65em;
+        }
     }
 }

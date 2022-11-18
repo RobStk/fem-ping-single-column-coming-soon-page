@@ -1,8 +1,9 @@
 @use "../configs/colors";
+@use "../utils/screen";
 
 .ping-single-column {
     height: 100%;
-    padding: 4rem 3.3rem;
+    padding: 4rem 0;
     text-align: center;
     display: grid;
     grid-template-columns: 100%;
@@ -18,6 +19,27 @@
         p {
             font-size: 1em;
             color: colors.$neutral-gray;
+        }
+    }
+
+    @include screen.respond-to("desktop") {
+        max-width: 39rem;
+        padding-top: 0;
+        gap: 0;
+
+        &__header {
+            margin: 0;
+        }
+
+        &__footer {
+            p {
+                font-size: 0.65em;
+                color: colors.$neutral-gray;
+            }
+        }
+
+        .logo {
+            height: unset;
         }
     }
 }

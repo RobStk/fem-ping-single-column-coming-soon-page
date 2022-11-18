@@ -21,7 +21,7 @@ body {
 }
 
 h1 {
-  font-size: 2.8rem;
+  font-size: 2.9rem;
   font-weight: 300;
   color: hsl(0deg, 0%, 59%);
 }
@@ -41,32 +41,24 @@ p {
   color: hsl(228deg, 45%, 44%);
 }
 
-.email-subscribe {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  min-height: 13em;
-}
 .email-subscribe input {
-  padding: 1.1em 2.5em;
   border: none;
   border-radius: 50vmax;
   font: inherit;
-  font-size: 1.2em;
 }
 .email-subscribe input[type=email] {
   border-style: solid;
-  border-width: 2px;
-  border-color: hsl(223deg, 100%, 88%);
+  border-width: 1px;
+  border-color: hsl(223deg, 40%, 85%);
 }
 .email-subscribe input[type=email]::-moz-placeholder {
-  color: hsl(223deg, 100%, 88%);
+  color: hsl(223deg, 40%, 85%);
 }
 .email-subscribe input[type=email]:-ms-input-placeholder {
-  color: hsl(223deg, 100%, 88%);
+  color: hsl(223deg, 40%, 85%);
 }
 .email-subscribe input[type=email]::placeholder {
-  color: hsl(223deg, 100%, 88%);
+  color: hsl(223deg, 40%, 85%);
 }
 .email-subscribe input[type=submit] {
   background-color: hsl(223deg, 87%, 63%);
@@ -74,7 +66,7 @@ p {
   font-weight: 600;
   cursor: pointer;
   box-shadow: 0px 16px 20px -1px hsla(223deg, 87%, 63%, 0.3);
-  transition: all 0.3s;
+  transition: background-color 0.2s;
 }
 .email-subscribe input[type=submit]:hover {
   background-color: hsl(223deg, 87%, 68%);
@@ -92,7 +84,7 @@ p {
   text-decoration: none;
   height: 2em;
   width: 2em;
-  border: solid 1px hsl(223deg, 100%, 88%);
+  border: solid 1px hsl(223deg, 40%, 85%);
   border-radius: 50%;
   color: hsl(223deg, 87%, 63%);
   display: flex;
@@ -131,10 +123,61 @@ p {
   -moz-column-gap: 1.3em;
        column-gap: 1.3em;
 }
+.article-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  min-height: 13em;
+  font-size: 1.2em;
+}
+.article-content form input {
+  padding: 1.1em 2.5em;
+}
+@media (min-width: 1440px) {
+  .article-content {
+    row-gap: 2rem;
+  }
+  .article-content__social {
+    margin-top: 1em;
+    -moz-column-gap: 0.8em;
+         column-gap: 0.8em;
+  }
+  .article-content form {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    min-height: 6.5em;
+    font-size: 0.85em;
+  }
+  .article-content form input {
+    padding: 1em 1.75em;
+  }
+  .article-content form input[type=email] {
+    flex-grow: 3;
+  }
+  .article-content form input[type=submit] {
+    flex-grow: 1;
+  }
+  .article-content .text-section {
+    gap: 1rem;
+  }
+  .article-content .text-section p {
+    font-size: unset;
+  }
+  .article-content .social-icon-container {
+    font-size: 0.65em;
+  }
+}
+
+.main-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 0 3.3rem;
+}
 
 .ping-single-column {
   height: 100%;
-  padding: 4rem 3.3rem;
+  padding: 4rem 0;
   text-align: center;
   display: grid;
   grid-template-columns: 100%;
@@ -149,4 +192,21 @@ p {
 .ping-single-column__footer p {
   font-size: 1em;
   color: hsl(0deg, 0%, 59%);
+}
+@media (min-width: 1440px) {
+  .ping-single-column {
+    max-width: 39rem;
+    padding-top: 0;
+    gap: 0;
+  }
+  .ping-single-column__header {
+    margin: 0;
+  }
+  .ping-single-column__footer p {
+    font-size: 0.65em;
+    color: hsl(0deg, 0%, 59%);
+  }
+  .ping-single-column .logo {
+    height: unset;
+  }
 }
