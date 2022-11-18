@@ -4,6 +4,7 @@
 .email-subscribe {
     input {
         border: none;
+        outline: none;
         border-radius: 50vmax;
         font: inherit;
 
@@ -30,6 +31,28 @@
             &:hover {
                 background-color: colors.$primary-blue-hover;
             }
+        }
+    }
+
+    .input-container-email {
+        &::after {
+            display: none;
+        }
+
+        &.error {
+            input {
+                border-color: colors.$secondary-light-red;
+            }
+        }
+
+        &.error::after {
+            content: attr(data-error);
+            display: block;
+            font-size: 0.8em;
+            font-style: italic;
+            color: colors.$secondary-light-red;
+            position: relative;
+            top: 0.5em;
         }
     }
 }

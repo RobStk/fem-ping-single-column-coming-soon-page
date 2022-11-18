@@ -1,3 +1,5 @@
+@use "../configs/colors";
+
 @mixin mobile {
     display: flex;
     flex-direction: column;
@@ -5,7 +7,14 @@
     min-height: 13em;
     font-size: 1.2em;
 
+    .input-container-email {
+        &::after {
+            padding-bottom: 2em;
+        }
+    }
+
     input {
+        width: 100%;
         padding: 1.1em 2.5em;
     }
 }
@@ -17,16 +26,21 @@
     min-height: 6.5em;
     font-size: 0.85em;
 
+    .input-container-email {
+        flex-grow: 3;
+
+        &::after {
+            text-align: left;
+            padding-left: 1.75rem;
+        }
+    }
+
+    .input-container-submit {
+        flex-grow: 1;
+    }
+
     input {
         padding: 1em 1.75em;
-
-        &[type=email] {
-            flex-grow: 3;
-        }
-
-        &[type=submit] {
-            flex-grow: 1;
-        }
     }
 
 

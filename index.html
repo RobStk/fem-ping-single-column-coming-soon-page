@@ -11,6 +11,7 @@
 
   <title>Frontend Mentor | Ping coming soon page</title>
   <script src="https://kit.fontawesome.com/b1af876e4a.js" crossorigin="anonymous"></script>
+  <script src="js/app.js" type="module"></script>
 </head>
 
 <body>
@@ -30,11 +31,17 @@
             </div>
           </section>
           <section class="article-content__form">
+
             <form class="email-subscribe" novalidate="true">
-              <input type="email" placeholder="Your email address...">
-              <input type="submit" value="Notify Me">
-              </form>
-              </section>
+              <div class="input-container-email">
+                <input type="email" placeholder="Your email address...">
+              </div>
+              <div class="input-container-submit">
+                <input type="submit" value="Notify Me">
+              </div>
+            </form>
+            
+          </section>
           <section class="article-content__image">
             <img src="images/illustration-dashboard.png" alt="">
           </section>
